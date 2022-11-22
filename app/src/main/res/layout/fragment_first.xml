@@ -28,11 +28,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/transaksi"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="296dp"
         android:background="#E7E7E7"
         android:text="TRANSAKSI BARU"
+
         android:textColor="@color/black"
         app:layout_anchorGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +43,12 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/riwayat"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="384dp"
         android:background="#E7E7E7"
         android:text="RIWAYAT TRANSAKSI"
+
         android:textColor="@color/black"
         app:layout_anchorGravity="center"
         app:layout_constraintEnd_toEndOf="parent"
