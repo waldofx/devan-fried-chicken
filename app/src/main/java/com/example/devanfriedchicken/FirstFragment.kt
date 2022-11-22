@@ -32,8 +32,12 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.transaksi.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_transaksiBaru)
+        }
+
+        binding.riwayat.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_riwayatTransaksi)
         }
     }
 
