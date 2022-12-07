@@ -9,5 +9,5 @@ data class Transaction (
     @PrimaryKey(autoGenerate = true)
     val id_transaction: Int,
     val total_price: Int,
-    val date: Date,
+    //    val date: Date,
 )

@@ -14,6 +14,7 @@ interface TransactionDao {
     @Delete
     suspend fun deleteTransaction(transaction: Transaction)
 
-    @Query("SELECT * FROM `transaction`")
-    suspend fun getTransactions(transaction: Transaction): List<Transaction>
+//    TypeConverters(MyConverter::class)
+//    @Query("SELECT * FROM [transaction]")
+//    fun getTransactions(transaction: Transaction): List<Transaction>
 }
