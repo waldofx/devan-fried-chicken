@@ -6,15 +6,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TransaksiBaru">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/orangeBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/title_activity_transaksi"
-        android:textSize="40sp"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/rectanglebg"
+        android:contentDescription="orangeBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="25dp"
+        android:text="Total transaksi:"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="200dp"
+        android:textColor="@color/black"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@color/grey2"
+        android:text="ReplaceWithTotal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/batal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="630dp"
+        android:background="@drawable/button_background"
+        android:text="BATAL TRANSAKSI"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/catat"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="630dp"
+        android:background="@drawable/button_background"
+        android:text="CATAT TRANSAKSI"
+        android:textColor="#3CE500"
+        android:textStyle="bold"
+        />
 
 </FrameLayout>
