@@ -16,11 +16,169 @@
         android:background="@drawable/rectanglebg"
         android:contentDescription="orangeBox" />
 
+    <!--    MENU    -->
+    <ImageView
+        android:id="@+id/img_pahab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="pahaBawah"
+        android:src="@drawable/pahabawah12"
+        />
+
+    <ImageView
+        android:id="@+id/img_pahab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="pahaBawah"
+        android:src="@drawable/pahabawah1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#F9E533"
+        android:text="Paha Bawah"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/img_sayap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/sayap2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#F9E533"
+        android:text="Sayap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/img_pahaa1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="35dp"
+        android:contentDescription="pahaAtas"
+        android:src="@drawable/pahaatas3"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#F9E533"
+        android:text="Paha Atas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/img_dada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="dada"
+        android:src="@drawable/dada4"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#F9E533"
+        android:text="Dada"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <ImageView
+        android:id="@+id/img_kepala2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="410dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="kepala"
+        android:src="@drawable/kepala52"
+        />
+
+    <ImageView
+        android:id="@+id/img_kepala1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="10dp"
+        android:contentDescription="kepala"
+        android:src="@drawable/kepala5"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#F9E533"
+        android:text="Kepala"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!--    Total transaksi   -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="550dp"
         android:layout_marginLeft="25dp"
+        android:fontFamily="@font/jockey_one"
         android:text="Total transaksi:"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -34,6 +192,7 @@
         android:layout_marginTop="580dp"
         android:layout_marginHorizontal="25dp"
         android:background="@color/grey2"
+        android:fontFamily="@font/jockey_one"
         android:text="ReplaceWithTotal"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -46,9 +205,15 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="630dp"
         android:background="@drawable/button_background"
-        android:text="BATAL TRANSAKSI"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
         android:textColor="#FF0000"
         android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="BATAL TRANSAKSI"
         />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -58,9 +223,15 @@
         android:layout_marginLeft="230dp"
         android:layout_marginTop="630dp"
         android:background="@drawable/button_background"
-        android:text="CATAT TRANSAKSI"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
         android:textColor="#3CE500"
         android:textStyle="bold"
+        android:textSize="20dp"
+        android:text="CATAT TRANSAKSI"
         />
 
 </FrameLayout>
