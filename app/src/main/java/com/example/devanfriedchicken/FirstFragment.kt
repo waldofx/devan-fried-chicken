@@ -39,6 +39,10 @@ class FirstFragment : Fragment() {
         binding.riwayat.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_riwayatTransaksi)
         }
+
+        binding.test.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_test)
+        }
     }
 
     override fun onDestroyView() {

@@ -11,11 +11,15 @@
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
         <action
+            android:id="@+id/action_FirstFragment_to_transaksiBaru"
+            app:destination="@id/transaksiBaru" />
+        <action
             android:id="@+id/action_FirstFragment_to_riwayatTransaksi"
             app:destination="@id/riwayatTransaksi" />
         <action
-            android:id="@+id/action_FirstFragment_to_transaksiBaru"
-            app:destination="@id/transaksiBaru" />
+            android:id="@+id/action_FirstFragment_to_test"
+            app:destination="@id/test" />
+
     </fragment>
     <fragment
         android:id="@+id/riwayatTransaksi"
@@ -27,5 +31,10 @@
         android:name="com.example.devanfriedchicken.TransaksiBaru"
         android:label="fragment_transaksi_baru"
         tools:layout="@layout/fragment_transaksi_baru" />
+    <fragment
+        android:id="@+id/test"
+        android:name="com.example.devanfriedchicken.Test"
+        android:label="Test"
+        tools:layout="@layout/fragment_test"/>
 
 </navigation>
