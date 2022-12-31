@@ -41,7 +41,7 @@ class FirstFragment : Fragment() {
         }
 
         binding.test.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_test)
+            findNavController().navigate(R.id.action_FirstFragment_to_testActivity)
         }
     }
 
