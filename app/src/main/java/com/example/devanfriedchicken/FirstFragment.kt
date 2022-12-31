@@ -33,7 +33,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.transaksi.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_transaksiBaru)
+            findNavController().navigate(R.id.action_FirstFragment_to_transaksiBaruActivity)
         }
 
         binding.riwayat.setOnClickListener {

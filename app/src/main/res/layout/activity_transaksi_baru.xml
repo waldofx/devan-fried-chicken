@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TransaksiBaru">
+    android:background="@drawable/gradient"
+    tools:context=".TransaksiBaruActivity">
 
     <ImageView
         android:id="@+id/orangeBox"
@@ -12,9 +13,11 @@
         android:layout_height="500dp"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginRight="25dp"
         android:background="@drawable/rectanglebg"
-        android:contentDescription="orangeBox" />
+        android:contentDescription="orangeBox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <!--    MENU    -->
     <ImageView
@@ -25,7 +28,9 @@
         android:layout_marginStart="20dp"
         android:contentDescription="pahaBawah"
         android:src="@drawable/pahabawah12"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/img_pahab1"
@@ -35,7 +40,9 @@
         android:layout_marginStart="20dp"
         android:contentDescription="pahaBawah"
         android:src="@drawable/pahabawah1"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,11 +55,12 @@
         android:shadowDy="5.0"
         android:shadowRadius="1.0"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Paha Bawah"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <ImageView
         android:id="@+id/img_sayap"
@@ -62,7 +70,9 @@
         android:layout_marginStart="30dp"
         android:contentDescription="sayap"
         android:src="@drawable/sayap2"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -75,11 +85,12 @@
         android:shadowDy="5.0"
         android:shadowRadius="1.0"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Sayap"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <ImageView
         android:id="@+id/img_pahaa1"
@@ -89,7 +100,9 @@
         android:layout_marginStart="35dp"
         android:contentDescription="pahaAtas"
         android:src="@drawable/pahaatas3"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -102,11 +115,12 @@
         android:shadowDy="5.0"
         android:shadowRadius="1.0"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Paha Atas"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <ImageView
         android:id="@+id/img_dada"
@@ -116,7 +130,9 @@
         android:layout_marginStart="30dp"
         android:contentDescription="dada"
         android:src="@drawable/dada4"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -129,11 +145,12 @@
         android:shadowDy="5.0"
         android:shadowRadius="1.0"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Dada"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <ImageView
         android:id="@+id/img_kepala2"
@@ -143,7 +160,9 @@
         android:layout_marginStart="20dp"
         android:contentDescription="kepala"
         android:src="@drawable/kepala52"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <ImageView
         android:id="@+id/img_kepala1"
@@ -153,7 +172,9 @@
         android:layout_marginStart="10dp"
         android:contentDescription="kepala"
         android:src="@drawable/kepala5"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -166,27 +187,30 @@
         android:shadowDy="5.0"
         android:shadowRadius="1.0"
         android:textStyle="bold"
-        android:textSize="18dp"
+        android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Kepala"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <!--    Total transaksi   -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="550dp"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:fontFamily="@font/jockey_one"
         android:text="Total transaksi:"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="580dp"
@@ -194,15 +218,19 @@
         android:background="@color/grey2"
         android:fontFamily="@font/jockey_one"
         android:text="ReplaceWithTotal"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        tools:layout_editor_absoluteX="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/batal"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="630dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
@@ -212,15 +240,17 @@
         android:shadowRadius="1.0"
         android:textColor="#FF0000"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:text="BATAL TRANSAKSI"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/catat"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="630dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
@@ -230,8 +260,10 @@
         android:shadowRadius="1.0"
         android:textColor="#3CE500"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:text="CATAT TRANSAKSI"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
