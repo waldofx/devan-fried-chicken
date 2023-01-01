@@ -62,6 +62,23 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
 
+    <!-- Edit Text is used to Enter
+    Item Quantity by user-->
+    <EditText
+        android:id="@+id/etPahaBawahQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="250dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
+
     <ImageView
         android:id="@+id/img_sayap"
         android:layout_width="wrap_content"
@@ -227,7 +244,7 @@
         tools:ignore="HardcodedText"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/batal"
+        android:id="@+id/buttonBatal"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -247,7 +264,7 @@
         tools:ignore="HardcodedText"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/catat"
+        android:id="@+id/buttonCatat"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="230dp"

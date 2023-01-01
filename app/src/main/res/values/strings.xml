@@ -21,6 +21,7 @@
     <string name="title">Add Items to your cart</string>
     <string name="etItem">Item</string>
     <string name="etQuantity">Quantity</string>
+    <string name="etQuantity2">0</string>
     <string name="etPrice">Price</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>

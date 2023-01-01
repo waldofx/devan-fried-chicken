@@ -27,7 +27,7 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         var currentPosition = list[position]
         holder.itemView.txtItemName.text = currentPosition.itemName
-        holder.itemView.txtItemPrice.text = "${currentPosition.itemPrice}"
+        holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
         holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
         holder.itemView.ibDelete.setOnClickListener {
             viewModel.delete(currentPosition)
@@ -41,7 +41,7 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
             }
             holder.itemView.txtItemTotalCost.visibility = View.VISIBLE
             holder.itemView.txtTotalCostTitle.visibility = View.VISIBLE
-            holder.itemView.txtItemTotalCost.text = "$totalCost"
+            holder.itemView.txtItemTotalCost.text = "Rp. $totalCost"
         }
     }
     // Inner class for viewHolder
