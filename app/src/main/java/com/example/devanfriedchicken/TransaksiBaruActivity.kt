@@ -3,16 +3,20 @@ package com.example.devanfriedchicken
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.devanfriedchicken.room.*
 import kotlinx.android.synthetic.main.activity_transaksi_baru.*
-import kotlinx.android.synthetic.main.transactiondialog.*
 
 class TransaksiBaruActivity() : AppCompatActivity() {
-    var dialogListener: DialogListener? = null
+    lateinit var transactionViewModel: TransactionViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transaksi_baru)
+
+        val transactionRepository = TransactionRepository(TransactionDatabase(this))
+        val factory = TransactionViewModelFactory(transactionRepository)
+        transactionViewModel = ViewModelProvider(this, factory).get(TransactionViewModel::class.java)
 
         // Click listener on Save button
         // to save all data.
@@ -20,14 +24,13 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
             // Take all three inputs in different variables from user
             // and add it in Transaction Items database
-            val name = "Paha Bawah"
-            val quantity = etPahaBawahQuantity.text.toString().toInt()
-            val price = 7000
+            val name_pahabawah = "Paha Bawah"
+            val quantity_pahabawah = etPahaBawahQuantity.text.toString().toInt()
+            val price_pahabawah = 7000
 
 //            if (quantity != 0) {
-                val item1 = TransactionItems(name, quantity, price)
-//                TransactionViewModel.insert(item1) //don't know why can't import insert
-                dialogListener?.onAddButtonClicked(item1) //fail to actually save
+                val item_pahabawah = TransactionItems(name_pahabawah, quantity_pahabawah, price_pahabawah)
+                transactionViewModel.insert(item_pahabawah) //don't know why can't import insert
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
 //            }
         }
