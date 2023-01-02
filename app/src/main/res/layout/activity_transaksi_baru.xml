@@ -206,6 +206,46 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
 
+    <EditText
+        android:id="@+id/etPahaAtasQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="240dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/tambah_pa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="290dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/tambah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/kurang_pa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="340dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/kurang"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
     <ImageView
         android:id="@+id/img_dada"
         android:layout_width="wrap_content"
@@ -232,6 +272,46 @@
         android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Dada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:id="@+id/etDadaQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="240dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/tambah_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="290dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/tambah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/kurang_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:layout_marginStart="340dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
@@ -274,6 +354,46 @@
         android:textSize="18sp"
         android:textColor="#F9E533"
         android:text="Kepala"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:id="@+id/etKepalaQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="240dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/tambah_k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="290dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/tambah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/kurang_k"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="340dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
