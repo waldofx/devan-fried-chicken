@@ -14,9 +14,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="itemName">Ayam</string>
-    <string name="itemQuantity">35</string>
-    <string name="itemPrice">Rp. 100</string>
-    <string name="totalCost">Rp. 350</string>
+    <string name="itemQuantity">5</string>
+    <string name="itemPrice">Rp. 1000</string>
+    <string name="totalCost">Rp. 5000</string>
+    <string name="datetime">123456</string>
     <string name="totalCostTitle">Total Cost</string>
     <string name="title">Add Items to your cart</string>
     <string name="etItem">Item</string>

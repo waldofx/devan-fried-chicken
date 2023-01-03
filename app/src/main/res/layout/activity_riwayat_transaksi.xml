@@ -7,16 +7,29 @@
     android:background="@drawable/gradient"
     tools:context=".RiwayatTransaksiActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/title_activity_riwayat"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:layout_marginTop="200dp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5" />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="@string/title_activity_riwayat"-->
+<!--        android:textSize="40sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintVertical_bias="0.5" />-->
+
+    <!-- Recycler View to display list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="380dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonExcel"

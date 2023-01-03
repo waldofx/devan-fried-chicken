@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.devanfriedchicken.room.TransactionItems
 import com.example.devanfriedchicken.R
 import com.example.devanfriedchicken.room.TransactionViewModel
-import kotlinx.android.synthetic.main.transactionadapter.view.*
+import kotlinx.android.synthetic.main.transactionadaptertest.view.*
 import java.text.SimpleDateFormat
 
 class TransactionAdapterTest(var list: List<TransactionItems>, val viewModel: TransactionViewModel) :

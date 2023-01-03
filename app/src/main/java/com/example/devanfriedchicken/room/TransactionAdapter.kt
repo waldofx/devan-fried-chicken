@@ -27,30 +27,16 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
     // In onBindViewHolder we will bind our itemViews with adapter
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         var currentPosition = list[position]
-        holder.itemView.txtItemName.text = currentPosition.itemName
-        holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
+        holder.itemView.txtItemName.text = "${currentPosition.itemName},"
+//        holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
         holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
-        holder.itemView.txtItemTotalCost.text = "Rp. ${currentPosition.itemPriceTotal}"
+        holder.itemView.txtItemTotalCost.text = "TOTAL TRANSAKSI: Rp. ${currentPosition.itemPriceTotal}"
 
-        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm:ss.SSS")
+        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm")
         val createdAt= simpleDateFormat.format(currentPosition.createdAt)
-        holder.itemView.txtItemDate.text = createdAt
-
-        holder.itemView.ibDelete.setOnClickListener {
-            viewModel.delete(currentPosition)
-        }
-
-//        // To get total cost
-//        if (position == list.size - 1) {
-//            var totalCost = 0
-//            for (i in 0 until list.size) {
-//                totalCost += list[i].itemPrice
-//            }
-//            holder.itemView.txtItemTotalCost.visibility = View.VISIBLE
-//            holder.itemView.txtTotalCostTitle.visibility = View.VISIBLE
-//            holder.itemView.txtItemTotalCost.text = "Rp. $totalCost"
-//        }
+        holder.itemView.txtItemDate.text = "TANGGAL TRANSAKSI: $createdAt"
     }
+
     // Inner class for viewHolder
     inner class TransactionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

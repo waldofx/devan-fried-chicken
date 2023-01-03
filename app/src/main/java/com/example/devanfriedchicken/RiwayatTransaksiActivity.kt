@@ -4,17 +4,40 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devanfriedchicken.room.*
 import kotlinx.android.synthetic.main.activity_riwayat_transaksi.*
+import kotlinx.android.synthetic.main.activity_riwayat_transaksi.rvList
 import java.io.File
 import java.io.FileWriter
 
 class RiwayatTransaksiActivity : AppCompatActivity() {
+    lateinit var ViewModel: TransactionViewModel
+    lateinit var list: List<TransactionItems>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_riwayat_transaksi)
 
-        // On click listener on batal to clear
+        //Room?
+        val transactionRepository = TransactionRepository(TransactionDatabase(this))
+        val factory = TransactionViewModelFactory(transactionRepository)
+
+        // Initialised View Model
+        ViewModel = ViewModelProvider(this, factory).get(TransactionViewModel::class.java)
+        val transactionAdapter = TransactionAdapter(listOf(), ViewModel)
+        rvList.layoutManager = LinearLayoutManager(this)
+        rvList.adapter = transactionAdapter
+
+        // To display all items in recycler view
+        ViewModel.allTransactionItems().observe(this, Observer {
+            transactionAdapter.list = it
+            transactionAdapter.notifyDataSetChanged()
+        })
+
+        // On click listener to export CSV/Excel
         buttonExcel.setOnClickListener {
             val exportDir = File(getExternalFilesDir(null) , "/CSV")// your path where you want save your file
             Log.e("error", exportDir.toString());
