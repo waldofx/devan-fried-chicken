@@ -14,8 +14,8 @@
             android:id="@+id/action_FirstFragment_to_transaksiBaruActivity"
             app:destination="@id/transaksiBaruActivity" />
         <action
-            android:id="@+id/action_FirstFragment_to_riwayatTransaksi"
-            app:destination="@id/riwayatTransaksi" />
+            android:id="@+id/action_FirstFragment_to_riwayatTransaksiActivity"
+            app:destination="@id/riwayatTransaksiActivity" />
         <action
             android:id="@+id/action_FirstFragment_to_testActivity"
             app:destination="@id/test" />
@@ -27,11 +27,11 @@
         android:name="com.example.devanfriedchicken.TransaksiBaruActivity"
         android:label="activity_transaksi_baru"
         tools:layout="@layout/activity_transaksi_baru" />
-    <fragment
-        android:id="@+id/riwayatTransaksi"
-        android:name="com.example.devanfriedchicken.RiwayatTransaksi"
-        android:label="fragment_riwayat_transaksi"
-        tools:layout="@layout/fragment_riwayat_transaksi" />
+    <activity
+        android:id="@+id/riwayatTransaksiActivity"
+        android:name="com.example.devanfriedchicken.RiwayatTransaksiActivity"
+        android:label="activity_riwayat_transaksi"
+        tools:layout="@layout/activity_riwayat_transaksi" />
     <activity
         android:id="@+id/test"
         android:name="com.example.devanfriedchicken.TestActivity"

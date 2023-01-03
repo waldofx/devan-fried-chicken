@@ -37,7 +37,7 @@ class FirstFragment : Fragment() {
         }
 
         binding.riwayat.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_riwayatTransaksi)
+            findNavController().navigate(R.id.action_FirstFragment_to_riwayatTransaksiActivity)
         }
 
         binding.test.setOnClickListener {
