@@ -8,6 +8,7 @@ import com.example.devanfriedchicken.room.TransactionItems
 import com.example.devanfriedchicken.R
 import com.example.devanfriedchicken.room.TransactionViewModel
 import kotlinx.android.synthetic.main.transactionadapter.view.*
+import java.text.SimpleDateFormat
 
 class TransactionAdapter(var list: List<TransactionItems>, val viewModel: TransactionViewModel) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
@@ -30,6 +31,10 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
         holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
         holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
         holder.itemView.txtItemTotalCost.text = "Rp. ${currentPosition.itemPriceTotal}"
+
+        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm:ss.SSS")
+        val createdAt= simpleDateFormat.format(currentPosition.createdAt)
+        holder.itemView.txtItemDate.text = createdAt
 
         holder.itemView.ibDelete.setOnClickListener {
             viewModel.delete(currentPosition)

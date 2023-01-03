@@ -3,7 +3,6 @@ package com.example.devanfriedchicken.room
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Date
 
 // This is a data class which store data.
 // Entities class create a table in database,
@@ -31,6 +30,9 @@ data class TransactionItems (
     // store transaction price.
     @ColumnInfo(name = "itemPriceTotal")
     var itemPriceTotal: Int,
+
+    @ColumnInfo(name = "created_at")
+    var createdAt: Long?,
 
 ) {
     // Primary key is a unique key

@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.devanfriedchicken.room.*
 import kotlinx.android.synthetic.main.activity_transaksi_baru.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class TransaksiBaruActivity() : AppCompatActivity() {
     lateinit var transactionViewModel: TransactionViewModel
@@ -29,14 +31,16 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
         // Click listener on Save button to save all data.
         buttonCatat.setOnClickListener {
-            // Take all three inputs in different variables from user
-            // and add it in Transaction Items database
+            // Take inputs in from user and add it in Transaction Items database
+            val createdAtStr = Calendar.getInstance().time.toString()
+            val time = getDateMillis(createdAtStr)
+
             if (quantity_pahabawah != 0) {
                 val name_pahabawah = "Paha Bawah"
                 quantity_pahabawah = etPahaBawahQuantity.text.toString().toInt()
                 val price_pahabawah = 7000
                 val total_pahabawah = quantity_pahabawah * price_pahabawah
-                val item_pahabawah = TransactionItems(name_pahabawah, quantity_pahabawah, price_pahabawah, total_pahabawah)
+                val item_pahabawah = TransactionItems(name_pahabawah, quantity_pahabawah, price_pahabawah, total_pahabawah, time)
                 transactionViewModel.insert(item_pahabawah)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -45,7 +49,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_sayap = etSayapQuantity.text.toString().toInt()
                 val price_sayap = 7000
                 val total_sayap = quantity_sayap * price_sayap
-                val item_sayap = TransactionItems(name_sayap, quantity_sayap, price_sayap, total_sayap)
+                val item_sayap = TransactionItems(name_sayap, quantity_sayap, price_sayap, total_sayap, time)
                 transactionViewModel.insert(item_sayap)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -54,7 +58,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_pahaatas = etPahaAtasQuantity.text.toString().toInt()
                 val price_pahaatas = 9000
                 val total_pahaatas = quantity_pahaatas * price_pahaatas
-                val item_pahaatas = TransactionItems(name_pahaatas, quantity_pahaatas, price_pahaatas, total_pahaatas)
+                val item_pahaatas = TransactionItems(name_pahaatas, quantity_pahaatas, price_pahaatas, total_pahaatas, time)
                 transactionViewModel.insert(item_pahaatas)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -63,7 +67,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_dada = etDadaQuantity.text.toString().toInt()
                 val price_dada = 9000
                 val total_dada = quantity_dada * price_dada
-                val item_dada = TransactionItems(name_dada, quantity_dada, price_dada, total_dada)
+                val item_dada = TransactionItems(name_dada, quantity_dada, price_dada, total_dada, time)
                 transactionViewModel.insert(item_dada)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -72,7 +76,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_kepala = etKepalaQuantity.text.toString().toInt()
                 val price_kepala = 3000
                 val total_kepala = quantity_kepala * price_kepala
-                val item_kepala = TransactionItems(name_kepala, quantity_kepala, price_kepala, total_kepala)
+                val item_kepala = TransactionItems(name_kepala, quantity_kepala, price_kepala, total_kepala, time)
                 transactionViewModel.insert(item_kepala)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -186,6 +190,24 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                     quantity_kepala--
                     etKepalaQuantity.setText(quantity_kepala.toString())
                 }
+            }
+        }
+    }
+
+    private fun getDateMillis(rawDateString: String?): Long {
+        if (rawDateString == null) {
+            return 0
+        } else {
+            try {
+                val formatter = SimpleDateFormat(
+                    "EEE MMM dd HH:mm:ss zzz yyyy",
+                    Locale.getDefault()
+                )
+                val rawDate = formatter.parse(rawDateString)
+                return rawDate?.time ?: 0
+            } catch (e: Exception) {
+                e.printStackTrace()
+                return 0
             }
         }
     }
