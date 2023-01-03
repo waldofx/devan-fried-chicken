@@ -19,35 +19,20 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonPDF"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="630dp"
-        android:background="@drawable/button_background"
-        android:fontFamily="@font/jockey_one"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:text="Export to PDF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="HardcodedText"/>
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonExcel"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="630dp"
+        android:layout_marginTop="600dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="Export to Excel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="HardcodedText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
