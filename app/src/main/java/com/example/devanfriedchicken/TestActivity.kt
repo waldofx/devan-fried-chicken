@@ -22,7 +22,7 @@ class TestActivity : AppCompatActivity() {
 
         // Initialised View Model
         ViewModel = ViewModelProvider(this, factory).get(TransactionViewModel::class.java)
-        val transactionAdapter = TransactionAdapter(listOf(), ViewModel)
+        val transactionAdapter = TransactionAdapterTest(listOf(), ViewModel)
         rvList.layoutManager = LinearLayoutManager(this)
         rvList.adapter = transactionAdapter
 
