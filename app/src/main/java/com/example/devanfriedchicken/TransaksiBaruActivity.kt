@@ -35,7 +35,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val name_pahabawah = "Paha Bawah"
                 quantity_pahabawah = etPahaBawahQuantity.text.toString().toInt()
                 val price_pahabawah = 7000
-                val item_pahabawah = TransactionItems(name_pahabawah, quantity_pahabawah, price_pahabawah)
+                val total_pahabawah = quantity_pahabawah * price_pahabawah
+                val item_pahabawah = TransactionItems(name_pahabawah, quantity_pahabawah, price_pahabawah, total_pahabawah)
                 transactionViewModel.insert(item_pahabawah)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -43,7 +44,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val name_sayap = "Sayap"
                 quantity_sayap = etSayapQuantity.text.toString().toInt()
                 val price_sayap = 7000
-                val item_sayap = TransactionItems(name_sayap, quantity_sayap, price_sayap)
+                val total_sayap = quantity_sayap * price_sayap
+                val item_sayap = TransactionItems(name_sayap, quantity_sayap, price_sayap, total_sayap)
                 transactionViewModel.insert(item_sayap)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -51,7 +53,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val name_pahaatas = "Paha Atas"
                 quantity_pahaatas = etPahaAtasQuantity.text.toString().toInt()
                 val price_pahaatas = 9000
-                val item_pahaatas = TransactionItems(name_pahaatas, quantity_pahaatas, price_pahaatas)
+                val total_pahaatas = quantity_pahaatas * price_pahaatas
+                val item_pahaatas = TransactionItems(name_pahaatas, quantity_pahaatas, price_pahaatas, total_pahaatas)
                 transactionViewModel.insert(item_pahaatas)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -59,7 +62,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val name_dada = "Dada"
                 quantity_dada = etDadaQuantity.text.toString().toInt()
                 val price_dada = 9000
-                val item_dada = TransactionItems(name_dada, quantity_dada, price_dada)
+                val total_dada = quantity_dada * price_dada
+                val item_dada = TransactionItems(name_dada, quantity_dada, price_dada, total_dada)
                 transactionViewModel.insert(item_dada)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
@@ -67,7 +71,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val name_kepala = "Kepala"
                 quantity_kepala = etKepalaQuantity.text.toString().toInt()
                 val price_kepala = 3000
-                val item_kepala = TransactionItems(name_kepala, quantity_kepala, price_kepala)
+                val total_kepala = quantity_kepala * price_kepala
+                val item_kepala = TransactionItems(name_kepala, quantity_kepala, price_kepala, total_kepala)
                 transactionViewModel.insert(item_kepala)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }

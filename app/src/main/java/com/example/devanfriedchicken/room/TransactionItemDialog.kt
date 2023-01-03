@@ -25,13 +25,14 @@ class TransactionItemDialog(context: Context, var dialogListener: DialogListener
             val name = etItemName.text.toString()
             val quantity = etItemQuantity.text.toString().toInt()
             val price = etItemPrice.text.toString().toInt()
+            val total = quantity * price
 
             // Toast to display enter items in edit text
             if (name.isEmpty()) {
                 Toast.makeText(context, "Please Enter Item Name", Toast.LENGTH_SHORT).show()
             }
 
-            val item = TransactionItems(name, quantity, price)
+            val item = TransactionItems(name, quantity, price, total)
             dialogListener.onAddButtonClicked(item)
             dismiss()
         }

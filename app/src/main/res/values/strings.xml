@@ -13,10 +13,10 @@
     <string name="title_activity_riwayat">riwayat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="itemName">Banana</string>
+    <string name="itemName">Ayam</string>
     <string name="itemQuantity">35</string>
-    <string name="itemPrice">250Rs</string>
-    <string name="totalCost">20</string>
+    <string name="itemPrice">Rp. 100</string>
+    <string name="totalCost">Rp. 350</string>
     <string name="totalCostTitle">Total Cost</string>
     <string name="title">Add Items to your cart</string>
     <string name="etItem">Item</string>
