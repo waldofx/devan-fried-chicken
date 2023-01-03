@@ -100,6 +100,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
         // On click listener on tambah kurang paha bawah
         tambah_pb.setOnClickListener {
             if(etPahaBawahQuantity.text.toString() == "") {
+                quantity_pahabawah = 1
                 etPahaBawahQuantity.setText(quantity_pahabawah.toString())
             } else{
                 quantity_pahabawah++
@@ -119,6 +120,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
         tambah_s.setOnClickListener {
             if(etSayapQuantity.text.toString() == "") {
+                quantity_sayap = 1
                 etSayapQuantity.setText(quantity_sayap.toString())
             } else{
                 quantity_sayap++
@@ -138,6 +140,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
         tambah_pa.setOnClickListener {
             if(etPahaAtasQuantity.text.toString() == "") {
+                quantity_pahaatas = 1
                 etPahaAtasQuantity.setText(quantity_pahaatas.toString())
             } else{
                 quantity_pahaatas++
@@ -157,6 +160,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
         tambah_d.setOnClickListener {
             if(etDadaQuantity.text.toString() == "") {
+                quantity_dada = 1
                 etDadaQuantity.setText(quantity_dada.toString())
             } else{
                 quantity_dada++
@@ -176,6 +180,7 @@ class TransaksiBaruActivity() : AppCompatActivity() {
 
         tambah_k.setOnClickListener {
             if(etKepalaQuantity.text.toString() == "") {
+                quantity_kepala = 1
                 etKepalaQuantity.setText(quantity_kepala.toString())
             } else{
                 quantity_kepala++
