@@ -21,4 +21,10 @@ interface TransactionDao {
     // all the data of database.
     @Query("SELECT * FROM transaction_items")
     fun getAllTransactionItems(): LiveData<List<TransactionItems>>
+
+    // getGroupTransactionItems function is used to get
+    // all the data of database grouped by created_at.
+    @Query("SELECT *, SUM(itemPriceTotal) AS itemPriceTotal FROM transaction_items" +
+            " GROUP BY created_at")
+    fun getGroupTransactionItems(): LiveData<List<TransactionItems>>
 }

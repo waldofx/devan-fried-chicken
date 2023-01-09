@@ -19,4 +19,6 @@ class TransactionViewModel(private val repository: TransactionRepository) : View
     //Here we initialized allTransactionItems function with repository
     fun allTransactionItems() = repository.allTransactionItems()
 
+    //Here we initialized groupTransactionItems function with repository
+    fun groupTransactionItems() = repository.groupTransactionItems()
 }

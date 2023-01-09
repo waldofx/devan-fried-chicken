@@ -8,4 +8,5 @@ class TransactionRepository(private val db: TransactionDatabase) {
     suspend fun delete(item: TransactionItems) = db.getTransactionDao().delete(item)
 
     fun allTransactionItems() = db.getTransactionDao().getAllTransactionItems()
+    fun groupTransactionItems() = db.getTransactionDao().getGroupTransactionItems()
 }

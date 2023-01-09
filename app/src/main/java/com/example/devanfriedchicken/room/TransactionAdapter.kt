@@ -27,9 +27,9 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
     // In onBindViewHolder we will bind our itemViews with adapter
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         var currentPosition = list[position]
-        holder.itemView.txtItemName.text = "${currentPosition.itemName},"
+//        holder.itemView.txtItemName.text = "${currentPosition.itemName},"
 //        holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
-        holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
+//        holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
         holder.itemView.txtItemTotalCost.text = "TOTAL TRANSAKSI: Rp. ${currentPosition.itemPriceTotal}"
 
         val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm")

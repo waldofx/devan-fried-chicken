@@ -32,7 +32,7 @@ class RiwayatTransaksiActivity : AppCompatActivity() {
         rvList.adapter = transactionAdapter
 
         // To display all items in recycler view
-        ViewModel.allTransactionItems().observe(this, Observer {
+        ViewModel.groupTransactionItems().observe(this, Observer {
             transactionAdapter.list = it
             transactionAdapter.notifyDataSetChanged()
         })
