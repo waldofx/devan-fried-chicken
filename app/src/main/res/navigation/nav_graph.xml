@@ -16,9 +16,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_riwayatTransaksiActivity"
             app:destination="@id/riwayatTransaksiActivity" />
-        <action
-            android:id="@+id/action_FirstFragment_to_testActivity"
-            app:destination="@id/test" />
+<!--        <action-->
+<!--            android:id="@+id/action_FirstFragment_to_testActivity"-->
+<!--            app:destination="@id/test" />-->
 
     </fragment>
 
@@ -32,10 +32,10 @@
         android:name="com.example.devanfriedchicken.RiwayatTransaksiActivity"
         android:label="activity_riwayat_transaksi"
         tools:layout="@layout/activity_riwayat_transaksi" />
-    <activity
-        android:id="@+id/test"
-        android:name="com.example.devanfriedchicken.TestActivity"
-        android:label="activity_test"
-        tools:layout="@layout/activity_test" />
+<!--    <activity-->
+<!--        android:id="@+id/test"-->
+<!--        android:name="com.example.devanfriedchicken.TestActivity"-->
+<!--        android:label="activity_test"-->
+<!--        tools:layout="@layout/activity_test" />-->
 
 </navigation>

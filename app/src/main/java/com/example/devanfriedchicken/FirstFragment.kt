@@ -40,9 +40,9 @@ class FirstFragment : Fragment() {
             findNavController().navigate(R.id.action_FirstFragment_to_riwayatTransaksiActivity)
         }
 
-        binding.test.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_testActivity)
-        }
+//        binding.test.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_testActivity)
+//        }
     }
 
     override fun onDestroyView() {
