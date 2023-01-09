@@ -3,6 +3,7 @@ package com.example.devanfriedchicken.room
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devanfriedchicken.room.TransactionItems
 import com.example.devanfriedchicken.R
@@ -10,7 +11,11 @@ import com.example.devanfriedchicken.room.TransactionViewModel
 import kotlinx.android.synthetic.main.transactionadapter.view.*
 import java.text.SimpleDateFormat
 
-class TransactionAdapter(var list: List<TransactionItems>, val viewModel: TransactionViewModel) :
+class TransactionAdapter(
+    var list: List<TransactionItems>,
+    val viewModel: TransactionViewModel,
+    private val listener: OnItemClickListener
+) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {
 
     // In this function we will add our transactionadapter.xml to kotlin class
@@ -38,5 +43,26 @@ class TransactionAdapter(var list: List<TransactionItems>, val viewModel: Transa
     }
 
     // Inner class for viewHolder
-    inner class TransactionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class TransactionViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
+        val textView1: TextView = itemView.txtItemDate
+        val textView2: TextView = itemView.txtItemTotalCost
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            var currentPosition = list[position]
+            val createdAt = currentPosition.createdAt
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position, createdAt)
+            }
+        }
+
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick(position: Int, createdAt: Long?)
+    }
 }

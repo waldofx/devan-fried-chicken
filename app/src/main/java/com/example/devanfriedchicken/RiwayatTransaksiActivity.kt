@@ -1,5 +1,6 @@
 package com.example.devanfriedchicken
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -9,11 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.devanfriedchicken.room.*
 import kotlinx.android.synthetic.main.activity_riwayat_transaksi.*
-import kotlinx.android.synthetic.main.activity_riwayat_transaksi.rvList
 import java.io.File
 import java.io.FileWriter
 
-class RiwayatTransaksiActivity : AppCompatActivity() {
+class RiwayatTransaksiActivity : AppCompatActivity(), TransactionAdapter.OnItemClickListener {
     lateinit var ViewModel: TransactionViewModel
     lateinit var list: List<TransactionItems>
 
@@ -27,7 +27,7 @@ class RiwayatTransaksiActivity : AppCompatActivity() {
 
         // Initialised View Model
         ViewModel = ViewModelProvider(this, factory).get(TransactionViewModel::class.java)
-        val transactionAdapter = TransactionAdapter(listOf(), ViewModel)
+        val transactionAdapter = TransactionAdapter(listOf(), ViewModel, this)
         rvList.layoutManager = LinearLayoutManager(this)
         rvList.adapter = transactionAdapter
 
@@ -78,5 +78,10 @@ class RiwayatTransaksiActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    //On click listener to navigate new page per item group
+    override fun onItemClick(position: Int, createdAt: Long?) {
+        Toast.makeText(this, "Item $position clicked. Created $createdAt", Toast.LENGTH_SHORT).show()
     }
 }
