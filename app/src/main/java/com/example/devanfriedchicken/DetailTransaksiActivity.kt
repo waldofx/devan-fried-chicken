@@ -6,10 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.sqlite.db.SimpleSQLiteQuery
 import com.example.devanfriedchicken.room.*
 import kotlinx.android.synthetic.main.activity_detail_transaksi.*
-import kotlinx.android.synthetic.main.activity_riwayat_transaksi.*
+import java.text.SimpleDateFormat
 
 class DetailTransaksiActivity : AppCompatActivity() {
     lateinit var ViewModel: TransactionViewModel
@@ -20,6 +19,13 @@ class DetailTransaksiActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_transaksi)
 
         val createdAtIntent = intent.getStringExtra("createdAtIntent").toString()
+        val totalIntent = intent.getStringExtra("totalIntent").toString()
+
+        //Text Created At Date + Total Price
+        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm")
+        val createdAtDate = simpleDateFormat.format(createdAtIntent.toLong())
+        txtItemDate.text = "TANGGAL TRANSAKSI: $createdAtDate"
+        txtItemTotalCost.text = "TOTAL TRANSAKSI: Rp. $totalIntent"
 
         //Room
         val transactionRepository = TransactionRepository(TransactionDatabase(this))
@@ -38,9 +44,9 @@ class DetailTransaksiActivity : AppCompatActivity() {
         })
 
 
-        // On click listener to export CSV/Excel
+        // On click listener to delete transaction group
         buttonHapus.setOnClickListener {
-            Toast.makeText(this, "Created $createdAtIntent", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "Created $createdAtIntent", Toast.LENGTH_SHORT).show()
         }
     }
 }

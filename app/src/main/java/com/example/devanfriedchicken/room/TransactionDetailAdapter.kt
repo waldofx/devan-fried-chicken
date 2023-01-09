@@ -3,11 +3,9 @@ package com.example.devanfriedchicken.room
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.devanfriedchicken.R
 import kotlinx.android.synthetic.main.transactiondetailadapter.view.*
-import java.text.SimpleDateFormat
 
 class TransactionDetailAdapter(var list: List<TransactionItems>, val viewModel: TransactionViewModel):
     RecyclerView.Adapter<TransactionDetailAdapter.TransactionViewHolder>() {
@@ -26,14 +24,10 @@ class TransactionDetailAdapter(var list: List<TransactionItems>, val viewModel: 
     // In onBindViewHolder we will bind our itemViews with adapter
     override fun onBindViewHolder(holder: TransactionViewHolder, position: Int) {
         var currentPosition = list[position]
-        holder.itemView.txtItemName.text = "${currentPosition.itemName},"
+        holder.itemView.txtItemName.text = "${currentPosition.itemName}"
         holder.itemView.txtItemPrice.text = "RP. ${currentPosition.itemPrice}"
         holder.itemView.txtItemQuantity.text = "${currentPosition.itemQuantity}"
-        holder.itemView.txtItemTotalCost.text = "TOTAL TRANSAKSI: Rp. ${currentPosition.itemPriceTotal}"
-
-        val simpleDateFormat = SimpleDateFormat("dd/MM/yyyy hh:mm")
-        val createdAt= simpleDateFormat.format(currentPosition.createdAt)
-        holder.itemView.txtItemDate.text = "TANGGAL TRANSAKSI: $createdAt"
+        holder.itemView.txtItemTotalCost.text = "Rp. ${currentPosition.itemPriceTotal}"
     }
 
     // Inner class for viewHolder

@@ -81,11 +81,13 @@ class RiwayatTransaksiActivity : AppCompatActivity(), TransactionAdapter.OnItemC
     }
 
     //On click listener to navigate new page per item group
-    override fun onItemClick(position: Int, createdAt: Long?) {
+    override fun onItemClick(position: Int, createdAt: Long?, total: Int) {
         val createdAtIntent = createdAt.toString()
-        Toast.makeText(this, "Item $position clicked. Created $createdAtIntent", Toast.LENGTH_SHORT).show()
+        val totalIntent = total.toString()
+//        Toast.makeText(this, "Item $position clicked. Created $createdAtIntent. Total $totalIntent", Toast.LENGTH_SHORT).show()
         val intent = Intent(this, DetailTransaksiActivity::class.java)
         intent.putExtra("createdAtIntent", createdAtIntent);
+        intent.putExtra("totalIntent", totalIntent);
         startActivity(intent)
     }
 }

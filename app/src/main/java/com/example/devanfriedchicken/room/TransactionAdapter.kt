@@ -55,14 +55,15 @@ class TransactionAdapter(
             val position = adapterPosition
             var currentPosition = list[position]
             val createdAt = currentPosition.createdAt
+            val total = currentPosition.itemPriceTotal
             if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(position, createdAt)
+                listener.onItemClick(position, createdAt, total)
             }
         }
 
     }
 
     interface OnItemClickListener{
-        fun onItemClick(position: Int, createdAt: Long?)
+        fun onItemClick(position: Int, createdAt: Long?, total: Int)
     }
 }
