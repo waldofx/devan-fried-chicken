@@ -1,5 +1,7 @@
 package com.example.devanfriedchicken.room
 
+import androidx.lifecycle.LiveData
+import androidx.sqlite.db.SupportSQLiteQuery
 import com.example.devanfriedchicken.room.TransactionItems
 
 class TransactionRepository(private val db: TransactionDatabase) {
@@ -9,4 +11,6 @@ class TransactionRepository(private val db: TransactionDatabase) {
 
     fun allTransactionItems() = db.getTransactionDao().getAllTransactionItems()
     fun groupTransactionItems() = db.getTransactionDao().getGroupTransactionItems()
+    fun allbygroupTransactionItems(time: String) = db.getTransactionDao().getAllByGroupTransactionItems(time)
+
 }

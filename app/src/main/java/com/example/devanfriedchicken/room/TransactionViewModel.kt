@@ -1,6 +1,7 @@
 package com.example.devanfriedchicken.room
 
 import androidx.lifecycle.ViewModel
+import androidx.sqlite.db.SupportSQLiteQuery
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -21,4 +22,7 @@ class TransactionViewModel(private val repository: TransactionRepository) : View
 
     //Here we initialized groupTransactionItems function with repository
     fun groupTransactionItems() = repository.groupTransactionItems()
+
+    //Here we initialized allbygroupTransactionItems function with repository
+    fun allbygroupTransactionItems(time: String) = repository.allbygroupTransactionItems(time)
 }

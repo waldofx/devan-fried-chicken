@@ -21,7 +21,7 @@ class RiwayatTransaksiActivity : AppCompatActivity(), TransactionAdapter.OnItemC
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_riwayat_transaksi)
 
-        //Room?
+        //Room
         val transactionRepository = TransactionRepository(TransactionDatabase(this))
         val factory = TransactionViewModelFactory(transactionRepository)
 
@@ -82,6 +82,10 @@ class RiwayatTransaksiActivity : AppCompatActivity(), TransactionAdapter.OnItemC
 
     //On click listener to navigate new page per item group
     override fun onItemClick(position: Int, createdAt: Long?) {
-        Toast.makeText(this, "Item $position clicked. Created $createdAt", Toast.LENGTH_SHORT).show()
+        val createdAtIntent = createdAt.toString()
+        Toast.makeText(this, "Item $position clicked. Created $createdAtIntent", Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, DetailTransaksiActivity::class.java)
+        intent.putExtra("createdAtIntent", createdAtIntent);
+        startActivity(intent)
     }
 }
