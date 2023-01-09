@@ -46,7 +46,12 @@ class DetailTransaksiActivity : AppCompatActivity() {
 
         // On click listener to delete transaction group
         buttonHapus.setOnClickListener {
-//            Toast.makeText(this, "Created $createdAtIntent", Toast.LENGTH_SHORT).show()
+            var deletes = ViewModel.deletebygroupTransactionItems(createdAtIntent).toString()
+            if (deletes == "0") {
+                Toast.makeText(this, "Item failed to delete...", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Item deleted...", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

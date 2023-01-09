@@ -13,4 +13,6 @@ class TransactionRepository(private val db: TransactionDatabase) {
     fun groupTransactionItems() = db.getTransactionDao().getGroupTransactionItems()
     fun allbygroupTransactionItems(time: String) = db.getTransactionDao().getAllByGroupTransactionItems(time)
 
+    suspend fun deletebygroupTransactionItems(time: String) = db.getTransactionDao().deleteAllByGroupTransactionItems(time)
+
 }

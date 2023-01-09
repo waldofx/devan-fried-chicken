@@ -141,7 +141,6 @@
         android:id="@+id/buttonHapus"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
         android:layout_marginTop="630dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
@@ -155,6 +154,7 @@
         android:text="HAPUS TRANSAKSI"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

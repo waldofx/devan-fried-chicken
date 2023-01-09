@@ -25,4 +25,9 @@ class TransactionViewModel(private val repository: TransactionRepository) : View
 
     //Here we initialized allbygroupTransactionItems function with repository
     fun allbygroupTransactionItems(time: String) = repository.allbygroupTransactionItems(time)
+
+    //Here we initialized deletebygroupTransactionItems function with repository
+    fun deletebygroupTransactionItems(time: String) = GlobalScope.launch {
+        repository.deletebygroupTransactionItems(time)
+    }
 }

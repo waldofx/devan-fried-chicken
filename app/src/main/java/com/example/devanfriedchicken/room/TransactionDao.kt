@@ -2,8 +2,6 @@ package com.example.devanfriedchicken.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import androidx.sqlite.db.SimpleSQLiteQuery
-import androidx.sqlite.db.SupportSQLiteQuery
 import com.example.devanfriedchicken.room.TransactionItems
 
 @Dao
@@ -31,7 +29,12 @@ interface TransactionDao {
     fun getGroupTransactionItems(): LiveData<List<TransactionItems>>
 
     // getGroupTransactionItems function is used to get
-    // all the data of database grouped by created_at.
+    // all the data of database inside grouped by created_at.
     @Query("SELECT * FROM transaction_items WHERE created_at = :time")
     fun getAllByGroupTransactionItems(time: String): LiveData<List<TransactionItems>>
+
+    // getGroupTransactionItems function is used to delete
+    // all the data of database inside grouped by created_at.
+    @Query("DELETE FROM transaction_items WHERE created_at = :time")
+    suspend fun deleteAllByGroupTransactionItems(time: String): Integer
 }
