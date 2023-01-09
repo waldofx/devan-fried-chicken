@@ -28,6 +28,9 @@ class TransaksiBaruActivity() : AppCompatActivity() {
         var quantity_pahaatas = 0
         var quantity_dada = 0
         var quantity_kepala = 0
+        var total_price = 0
+
+        textView2.text = "Rp. $total_price"
 
         // Click listener on Save button to save all data.
         buttonCatat.setOnClickListener {
@@ -94,6 +97,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
             quantity_dada = 0
             etKepalaQuantity.setText("")
             quantity_kepala = 0
+            total_price = 0
+            textView2.setText("Rp. $total_price")
         }
 
 
@@ -106,6 +111,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_pahabawah++
                 etPahaBawahQuantity.setText(quantity_pahabawah.toString())
             }
+            total_price += 7000
+            textView2.setText("Rp. $total_price")
         }
         kurang_pb.setOnClickListener {
             if(etPahaBawahQuantity.text.toString() != "0"){
@@ -114,6 +121,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_pahabawah--
                     etPahaBawahQuantity.setText(quantity_pahabawah.toString())
+                    total_price -= 7000
+                    textView2.text = "Rp. $total_price"
                 }
             }
         }
@@ -126,6 +135,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_sayap++
                 etSayapQuantity.setText(quantity_sayap.toString())
             }
+            total_price += 7000
+            textView2.setText("Rp. $total_price")
         }
         kurang_s.setOnClickListener {
             if(etSayapQuantity.text.toString() != "0"){
@@ -134,6 +145,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_sayap--
                     etSayapQuantity.setText(quantity_sayap.toString())
+                    total_price -= 7000
+                    textView2.text = "Rp. $total_price"
                 }
             }
         }
@@ -146,6 +159,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_pahaatas++
                 etPahaAtasQuantity.setText(quantity_pahaatas.toString())
             }
+            total_price += 9000
+            textView2.setText("Rp. $total_price")
         }
         kurang_pa.setOnClickListener {
             if(etPahaAtasQuantity.text.toString() != "0"){
@@ -154,6 +169,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_pahaatas--
                     etPahaAtasQuantity.setText(quantity_pahaatas.toString())
+                    total_price -= 9000
+                    textView2.text = "Rp. $total_price"
                 }
             }
         }
@@ -166,6 +183,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_dada++
                 etDadaQuantity.setText(quantity_dada.toString())
             }
+            total_price += 9000
+            textView2.setText("Rp. $total_price")
         }
         kurang_d.setOnClickListener {
             if(etDadaQuantity.text.toString() != "0"){
@@ -174,6 +193,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_dada--
                     etDadaQuantity.setText(quantity_dada.toString())
+                    total_price -= 9000
+                    textView2.text = "Rp. $total_price"
                 }
             }
         }
@@ -186,6 +207,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 quantity_kepala++
                 etKepalaQuantity.setText(quantity_kepala.toString())
             }
+            total_price += 3000
+            textView2.setText("Rp. $total_price")
         }
         kurang_k.setOnClickListener {
             if(etKepalaQuantity.text.toString() != "0"){
@@ -194,6 +217,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_kepala--
                     etKepalaQuantity.setText(quantity_kepala.toString())
+                    total_price -= 3000
+                    textView2.text = "Rp. $total_price"
                 }
             }
         }
