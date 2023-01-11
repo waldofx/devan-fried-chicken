@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,15 @@
     android:background="@drawable/gradient"
     tools:context=".TransaksiBaruActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
+
     <ImageView
         android:id="@+id/orangeBox"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="625dp"
         android:layout_marginTop="40dp"
         android:layout_marginHorizontal="25dp"
         android:background="@drawable/rectanglebg"
@@ -318,7 +323,7 @@
         android:id="@+id/img_kepala2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="400dp"
         android:layout_marginStart="20dp"
         android:contentDescription="kepala"
         android:src="@drawable/kepala52"
@@ -330,7 +335,7 @@
         android:id="@+id/img_kepala1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="390dp"
         android:layout_marginStart="10dp"
         android:contentDescription="kepala"
         android:src="@drawable/kepala5"
@@ -341,7 +346,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="460dp"
         android:layout_marginStart="120dp"
         android:fontFamily="@font/jockey_one"
         android:shadowColor="#000000"
@@ -396,18 +401,158 @@
         app:layout_constraintEnd_toEndOf="@id/tambah_k"
         tools:ignore="HardcodedText"/>
 
+    <ImageView
+        android:id="@+id/img_nasi"
+        android:layout_width="200px"
+        android:layout_height="200px"
+        android:layout_marginTop="510dp"
+        android:layout_marginStart="35dp"
+        android:contentDescription="nasi"
+        android:src="@drawable/nasi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="530dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#F9E533"
+        android:text="Nasi"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:id="@+id/etNasiQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_k"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/tambah_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/tambah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/kurang_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/kurang"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_k"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/img_sambal"
+        android:layout_width="180px"
+        android:layout_height="180px"
+        android:layout_marginTop="590dp"
+        android:layout_marginStart="40dp"
+        android:contentDescription="sambal"
+        android:src="@drawable/sambal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="610dp"
+        android:layout_marginStart="120dp"
+        android:fontFamily="@font/jockey_one"
+        android:shadowColor="#000000"
+        android:shadowDx="5.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="1.0"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#F9E533"
+        android:text="Sambal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <EditText
+        android:id="@+id/etSambalQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="50dp"
+        android:layout_weight="1"
+        android:hint="@string/etQuantity2"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_k"
+        android:autofillHints="" />
+
+    <ImageView
+        android:id="@+id/tambah_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/tambah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText"/>
+
+    <ImageView
+        android:id="@+id/kurang_sm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="sayap"
+        android:src="@drawable/kurang"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_k"
+        tools:ignore="HardcodedText"/>
+
     <!--    Total transaksi   -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="25dp"
         android:fontFamily="@font/jockey_one"
         android:text="Total transaksi:"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
 
@@ -415,7 +560,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="25dp"
         android:background="@color/grey2"
         android:fontFamily="@font/jockey_one"
@@ -423,8 +568,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="25dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
 
@@ -433,7 +577,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="630dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
         android:shadowColor="#000000"
@@ -444,7 +588,7 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="BATAL TRANSAKSI"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="HardcodedText"/>
 
@@ -452,7 +596,7 @@
         android:id="@+id/buttonCatat"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="630dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
@@ -464,8 +608,10 @@
         android:textStyle="bold"
         android:textSize="20sp"
         android:text="CATAT TRANSAKSI"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

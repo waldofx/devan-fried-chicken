@@ -29,6 +29,8 @@ class TransaksiBaruActivity() : AppCompatActivity() {
         var quantity_pahaatas = 0
         var quantity_dada = 0
         var quantity_kepala = 0
+        var quantity_nasi = 0
+        var quantity_sambal = 0
         var total_price = 0
 
         textView2.text = "Rp. $total_price"
@@ -84,12 +86,31 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 transactionViewModel.insert(item_kepala)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
             }
+            if (quantity_nasi != 0) {
+                val name_nasi = "Nasi"
+                quantity_nasi = etNasiQuantity.text.toString().toInt()
+                val price_nasi = 4000
+                val total_nasi = quantity_nasi * price_nasi
+                val item_nasi = TransactionItems(name_nasi, quantity_nasi, price_nasi, total_nasi, time)
+                transactionViewModel.insert(item_nasi)
+                Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
+            }
+            if (quantity_sambal != 0) {
+                val name_sambal = "Sambal"
+                quantity_sambal = etSambalQuantity.text.toString().toInt()
+                val price_sambal = 3000
+                val total_sambal = quantity_sambal * price_sambal
+                val item_sambal = TransactionItems(name_sambal, quantity_sambal, price_sambal, total_sambal, time)
+                transactionViewModel.insert(item_sambal)
+                Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
+            }
             // Go to Detail Transaksi Activity after all insert
             if (quantity_pahabawah != 0 || quantity_sayap != 0 || quantity_pahaatas != 0 ||
-                quantity_dada != 0 || quantity_kepala != 0) {
+                quantity_dada != 0 || quantity_kepala != 0 || quantity_nasi != 0 ||
+                quantity_sambal != 0) {
                 val total = quantity_pahabawah * 7000 + quantity_sayap * 7000 +
                         quantity_pahaatas * 9000 + quantity_dada * 9000 +
-                        quantity_kepala * 3000
+                        quantity_kepala * 3000 + quantity_nasi * 4000 + quantity_sambal * 3000
                 val createdAtIntent = time.toString()
                 val totalIntent = total.toString()
                 val intent = Intent(this, DetailTransaksiActivity::class.java)
@@ -111,6 +132,10 @@ class TransaksiBaruActivity() : AppCompatActivity() {
             quantity_dada = 0
             etKepalaQuantity.setText("")
             quantity_kepala = 0
+            etNasiQuantity.setText("")
+            quantity_nasi = 0
+            etSambalQuantity.setText("")
+            quantity_sambal = 0
             total_price = 0
             textView2.setText("Rp. $total_price")
         }
@@ -231,6 +256,54 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 } else{
                     quantity_kepala--
                     etKepalaQuantity.setText(quantity_kepala.toString())
+                    total_price -= 3000
+                    textView2.text = "Rp. $total_price"
+                }
+            }
+        }
+
+        tambah_n.setOnClickListener {
+            if(etNasiQuantity.text.toString() == "") {
+                quantity_nasi = 1
+                etNasiQuantity.setText(quantity_nasi.toString())
+            } else{
+                quantity_nasi++
+                etNasiQuantity.setText(quantity_nasi.toString())
+            }
+            total_price += 4000
+            textView2.setText("Rp. $total_price")
+        }
+        kurang_n.setOnClickListener {
+            if(etNasiQuantity.text.toString() != "0"){
+                if(etNasiQuantity.text.toString() == "") {
+                    etNasiQuantity.setText(quantity_nasi.toString())
+                } else{
+                    quantity_nasi--
+                    etNasiQuantity.setText(quantity_nasi.toString())
+                    total_price -= 4000
+                    textView2.text = "Rp. $total_price"
+                }
+            }
+        }
+
+        tambah_sm.setOnClickListener {
+            if(etSambalQuantity.text.toString() == "") {
+                quantity_sambal = 1
+                etSambalQuantity.setText(quantity_sambal.toString())
+            } else{
+                quantity_sambal++
+                etSambalQuantity.setText(quantity_sambal.toString())
+            }
+            total_price += 3000
+            textView2.setText("Rp. $total_price")
+        }
+        kurang_sm.setOnClickListener {
+            if(etSambalQuantity.text.toString() != "0"){
+                if(etSambalQuantity.text.toString() == "") {
+                    etSambalQuantity.setText(quantity_sambal.toString())
+                } else{
+                    quantity_sambal--
+                    etSambalQuantity.setText(quantity_sambal.toString())
                     total_price -= 3000
                     textView2.text = "Rp. $total_price"
                 }
