@@ -2,6 +2,7 @@
 
 package com.example.devanfriedchicken
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -82,6 +83,19 @@ class TransaksiBaruActivity() : AppCompatActivity() {
                 val item_kepala = TransactionItems(name_kepala, quantity_kepala, price_kepala, total_kepala, time)
                 transactionViewModel.insert(item_kepala)
                 Toast.makeText(applicationContext, "Item inserted...", Toast.LENGTH_SHORT).show()
+            }
+            // Go to Detail Transaksi Activity after all insert
+            if (quantity_pahabawah != 0 || quantity_sayap != 0 || quantity_pahaatas != 0 ||
+                quantity_dada != 0 || quantity_kepala != 0) {
+                val total = quantity_pahabawah * 7000 + quantity_sayap * 7000 +
+                        quantity_pahaatas * 9000 + quantity_dada * 9000 +
+                        quantity_kepala * 3000
+                val createdAtIntent = time.toString()
+                val totalIntent = total.toString()
+                val intent = Intent(this, DetailTransaksiActivity::class.java)
+                intent.putExtra("createdAtIntent", createdAtIntent)
+                intent.putExtra("totalIntent", totalIntent)
+                startActivity(intent)
             }
         }
 
