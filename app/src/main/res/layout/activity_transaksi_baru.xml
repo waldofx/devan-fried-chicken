@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    android:orientation="vertical"
     tools:context=".TransaksiBaruActivity">
 
     <ImageView
@@ -71,7 +69,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="50dp"
         android:layout_weight="1"
         android:hint="@string/etQuantity2"
         android:inputType="number"
@@ -79,7 +77,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_pb"
         android:autofillHints="" />
 
     <ImageView
@@ -87,11 +85,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/tambah"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -99,11 +97,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_pb"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -141,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="50dp"
         android:layout_weight="1"
         android:hint="@string/etQuantity2"
         android:inputType="number"
@@ -149,7 +147,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_s"
         android:autofillHints="" />
 
     <ImageView
@@ -157,11 +155,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/tambah"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -169,11 +167,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_s"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -211,7 +209,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="255dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="50dp"
         android:layout_weight="1"
         android:hint="@string/etQuantity2"
         android:inputType="number"
@@ -219,7 +217,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_pa"
         android:autofillHints="" />
 
     <ImageView
@@ -227,11 +225,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="255dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/tambah"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -239,11 +237,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="255dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_pa"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -281,7 +279,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="50dp"
         android:layout_weight="1"
         android:hint="@string/etQuantity2"
         android:inputType="number"
@@ -289,7 +287,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_d"
         android:autofillHints="" />
 
     <ImageView
@@ -297,11 +295,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/tambah"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -309,11 +307,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_d"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -363,7 +361,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
-        android:layout_marginStart="240dp"
+        android:layout_marginEnd="50dp"
         android:layout_weight="1"
         android:hint="@string/etQuantity2"
         android:inputType="number"
@@ -371,7 +369,7 @@
         android:textSize="20sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/kurang_k"
         android:autofillHints="" />
 
     <ImageView
@@ -379,11 +377,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
-        android:layout_marginStart="290dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/tambah"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
     <ImageView
@@ -391,11 +389,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="450dp"
-        android:layout_marginStart="340dp"
+        android:layout_marginEnd="40dp"
         android:contentDescription="sayap"
         android:src="@drawable/kurang"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tambah_k"
         tools:ignore="HardcodedText"/>
 
     <!--    Total transaksi   -->
@@ -454,8 +452,8 @@
         android:id="@+id/buttonCatat"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
         android:layout_marginTop="630dp"
+        android:layout_marginEnd="25dp"
         android:background="@drawable/button_background"
         android:fontFamily="@font/jockey_one"
         android:shadowColor="#000000"
@@ -467,7 +465,7 @@
         android:textSize="20sp"
         android:text="CATAT TRANSAKSI"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="HardcodedText"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
